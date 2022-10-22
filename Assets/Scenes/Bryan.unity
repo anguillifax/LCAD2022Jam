@@ -906,8 +906,8 @@ Rigidbody:
   m_GameObject: {fileID: 856375103}
   serializedVersion: 2
   m_Mass: 5
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.7
+  m_AngularDrag: 0.81
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -937,7 +937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922684833}
   m_LocalRotation: {x: 0.3898795, y: 0, z: 0, w: 0.9208659}
-  m_LocalPosition: {x: 0, y: 6.7, z: -7.1}
+  m_LocalPosition: {x: 0, y: 7.25, z: -7.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -978,11 +978,18 @@ MonoBehaviour:
   targetLevelOrigin: {fileID: 1004868595}
   rigRoot: {fileID: 925722007}
   rigOffset: {fileID: 922684834}
+  rigZoom: {fileID: 564431310}
   mode: 0
   rootSmoothDamp: 0.1
-  rotateAutoSpeed: 5
-  rotateSpeed: 20
-  rotateResetSmoothDamp: 0.3
+  rotateAutoSpeed: -5
+  rotateSpeed: -65
+  rotateSpeedTargetDamp: 0.3
+  turntableResetDamp: 0.3
+  farDistance: -10
+  farSmoothDamp: 2.01
+  curRotateSpeed: 0
+  idleTimer: 0
+  idleTimerMax: 0.4
 --- !u!4 &925722007
 Transform:
   m_ObjectHideFlags: 0
