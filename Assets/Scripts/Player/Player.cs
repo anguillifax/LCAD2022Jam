@@ -126,7 +126,7 @@ public class Player : MonoBehaviour {
 			paint.RemoveAll();
 			water.SetAmount(pond.amount);
 		}
-		if (other.GetIfExists<PaintBlob>(out var paintBlob)) {
+		if (other.GetIfExists<PaintCan>(out var paintBlob)) {
 			water.RemoveAll();
 			paint.SetAmount(paintBlob.amount);
 			paintBlob.BeginDestroy();

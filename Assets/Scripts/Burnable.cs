@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Burnable : MonoBehaviour {
 	[Header("Config")]
 	public float maxBurn = 0.5f;
+	public float maxBurnJitter = 0.2f;
 	public float propagateRadius = 2;
 	public UnityEvent ignited;
 	public UnityEvent burned;
@@ -14,6 +15,7 @@ public class Burnable : MonoBehaviour {
 
 	[Header("Live")]
 	public float current;
+	private float targetMax;
 
 	// ------------------------------
 
@@ -25,7 +27,7 @@ public class Burnable : MonoBehaviour {
 		if (current >= 0) {
 			current += Time.fixedDeltaTime;
 		}
-		if (current > maxBurn) {
+		if (current > targetMax) {
 			burned.Invoke();
 			Propagate();
 			enabled = false;
@@ -37,6 +39,7 @@ public class Burnable : MonoBehaviour {
 			return;
 		}
 		current = 0;
+		targetMax = maxBurn + UnityEngine.Random.Range(-maxBurnJitter, maxBurnJitter);
 		ignited.Invoke();
 	}
 

@@ -12,6 +12,8 @@ public class PlayerMaterialSpawner : MonoBehaviour
 		public GameObject prefabRemove;
 	}
 
+	public Vector3 offset;
+
 	public MaterialEffects paint;
 	public MaterialEffects fire;
 	public MaterialEffects water;
@@ -35,7 +37,7 @@ public class PlayerMaterialSpawner : MonoBehaviour
 
 	private void SpawnIfExists(GameObject prefab) {
 		if (prefab) {
-			Instantiate(prefab, transform.position, prefab.transform.rotation);
+			Instantiate(prefab, transform.position + offset, prefab.transform.rotation);
 		}
 	}
 }

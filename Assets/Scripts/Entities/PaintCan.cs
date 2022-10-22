@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintBlob : MonoBehaviour
+public class PaintCan : MonoBehaviour
 {
 	public float amount = 100;
 
