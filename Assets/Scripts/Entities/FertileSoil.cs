@@ -18,6 +18,7 @@ public class FertileSoil : MonoBehaviour
 			if (player.water.current > 0 && blocker == null) {
 				isGrown = true;
 				blocker = Instantiate(prefabFlower, spawnPos.transform.position, prefabFlower.transform.rotation);
+				blocker.GetComponent<Flower>().owner = this;
 			}
 		}
 	}

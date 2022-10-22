@@ -11,7 +11,10 @@ GameObject:
   - component: {fileID: 94703599542561001}
   - component: {fileID: 94703599542561000}
   - component: {fileID: 94703599542561003}
+  - component: {fileID: 4124587247768377641}
   - component: {fileID: 94703599542560917}
+  - component: {fileID: -7633182588983164216}
+  - component: {fileID: 6424736425059176363}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Untagged
@@ -84,6 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &4124587247768377641
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94703599542560916}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.29
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &94703599542560917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +113,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxBurn: 0.5
+  maxBurnJitter: 0.2
   propagateRadius: 1.2
+  ignited:
+    m_PersistentCalls:
+      m_Calls: []
   burned:
     m_PersistentCalls:
       m_Calls: []
@@ -105,3 +125,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483647
   current: 0
+--- !u!114 &-7633182588983164216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94703599542560916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7d4e1d556f7384b832552a2b1293c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 0}
+  destroyDelay: 1
+--- !u!95 &6424736425059176363
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94703599542560916}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7aa216a188f21349863ab6c2bdcd771, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
