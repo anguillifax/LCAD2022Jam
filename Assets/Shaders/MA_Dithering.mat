@@ -35,17 +35,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Clip_Threshold: 1
-    - _Dither_Offset: 1
+    - _Clip_Threshold: 0.75
+    - _Dither_Offset: 6
     - _Dither_Range: 0.5
-    - _Dither_Size: 2
+    - _Dither_Size: 0.2
     - _Emissive_Strength: 1
     - _Metallic: 0
+    - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
     m_Colors:
-    - _Base_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
+    - _Base_Color: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8948586275453591009
 MonoBehaviour:
