@@ -35,7 +35,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Clip_Threshold: 0.75
+    - _Clip_Threshold: 0
     - _Dither_Offset: 6
     - _Dither_Range: 0.5
     - _Dither_Size: 0.2
