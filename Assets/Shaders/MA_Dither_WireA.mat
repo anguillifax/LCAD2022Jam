@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5225511254436622387
+--- !u!114 &-2888881173356992339
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_PaintSteam_Mask
-  m_Shader: {fileID: -6465566751694194690, guid: d4556ac350f3a824b93be2fc748fadc9,
+  m_Name: MA_Dither_WireA
+  m_Shader: {fileID: -6465566751694194690, guid: b3ab79327c4abb44e9269b13c6ac58ec,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -34,18 +34,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Alpha_Mask:
-        m_Texture: {fileID: 2800000, guid: 65acf171cb3490449b6bf295d90617b8, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Noise_Texture:
-        m_Texture: {fileID: 2800000, guid: 7a436ac7ba534704883481845da25221, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -60,21 +48,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Add_Tint: 1
-    - _Animation_Speed: 0.005
+    - _Clip_Threshold: 1
+    - _Dither_Offset: 1
+    - _Dither_Range: 0.5
+    - _Dither_Size: 1
     - _Emissive_Strength: 0
-    - _Fresnel_Fade: 1
     - _Metallic: 0
     - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
-    - _Texture_Strength: 5
-    - _Texture_Tiling: 1
-    - _Use_Alpha_Mask: 1
-    - _Use_Gradient: 1
-    - _Use_Noise_Map: 1
     m_Colors:
-    - _Emissive_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Tint: {r: 0, g: 0, b: 0, a: 0}
+    - _Base_Color: {r: 1, g: 0.81007373, b: 0, a: 0}
   m_BuildTextureStacks: []
