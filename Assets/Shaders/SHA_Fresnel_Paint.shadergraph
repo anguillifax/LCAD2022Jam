@@ -2524,7 +2524,7 @@
     "m_AllowMaterialOverride": false,
     "m_SurfaceType": 1,
     "m_ZTestMode": 4,
-    "m_ZWriteControl": 1,
+    "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
     "m_RenderFace": 2,
     "m_AlphaClip": false,
@@ -7064,9 +7064,9 @@
     "m_Value": {
         "serializedVersion": "2",
         "key0": {
-            "r": 1.0,
+            "r": 0.8926730155944824,
             "g": 0.0,
-            "b": 0.0,
+            "b": 1.0,
             "a": 1.0
         },
         "key1": {
@@ -7106,9 +7106,9 @@
             "a": 0.0
         },
         "key7": {
-            "r": 1.0,
+            "r": 0.8962695598602295,
             "g": 0.0,
-            "b": 0.0,
+            "b": 1.0,
             "a": 0.0
         },
         "ctime0": 0,
