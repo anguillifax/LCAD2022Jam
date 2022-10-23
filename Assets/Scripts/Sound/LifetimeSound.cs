@@ -17,6 +17,9 @@ public class LifetimeSound : MonoBehaviour {
 	[Tooltip("Maps speed of the objects in m/s to pitch. A quick pace is ~8 m/s.")]
 	public AnimationCurve speedToPitch = new AnimationCurve(new Keyframe(0, 1), new Keyframe(8, 1));
 
+	[Header("Associated Rigidbody")]
+	public Rigidbody body;
+
 	private float volumeTarget;
 	private float curVolume;
 
@@ -33,6 +36,7 @@ public class LifetimeSound : MonoBehaviour {
 	private void Update() {
 		curVolume = Mathf.MoveTowards(curVolume, volumeTarget, 1f / fadeDuration * Time.deltaTime);
 		loop.volume = volumeFade.Evaluate(curVolume);
+		loop.pitch = speedToPitch.Evaluate(body.velocity.magnitude);
 	}
 
 	public void End() {
