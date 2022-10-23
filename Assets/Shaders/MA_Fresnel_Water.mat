@@ -43,7 +43,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Animation_Speed: 0.1
+    - _Animation_Speed: 0.5
     - _Emissive_Strength: 0
     - _Fresnel_Fade: 1
     - _Fresnel_Intensity: 1
