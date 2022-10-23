@@ -2,45 +2,47 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class LifetimeSound : MonoBehaviour {
-	[Header("Input Files")]
+[Serializable]
+public class LifetimeSound {
+	public SoundApiAsset asset;
 	public ShuffleBox start;
+	public ShuffleBox stop;
+	public AudioSource oneShot;
 	public AudioSource loop;
-	public ShuffleBox end;
-
-	[Header("Curve Maps")]
-	[Tooltip("How long it takes to fade in and out in seconds.")]
-	public float fadeDuration = 0.5f;
-	[Tooltip("Shared curve for fade-in and fade-out volume.")]
-	public AnimationCurve volumeFade = new AnimationCurve(new Keyframe(0, 0), new Keyframe(1, 1));
-	[Tooltip("Maps speed of the objects in m/s to pitch. A quick pace is ~8 m/s.")]
-	public AnimationCurve speedToPitch = new AnimationCurve(new Keyframe(0, 1), new Keyframe(8, 1));
-
-	[Header("Associated Rigidbody")]
-	public Rigidbody body;
 
 	private float volumeTarget;
 	private float curVolume;
 
-	private void OnEnable() {
-		curVolume = 0;
+	public void Initialize(SoundApiAsset asset, SoundApiAsset.LifetimeSoundConfig config) {
+		this.asset = asset;
+		start.clips = config.start;
+		stop.clips = config.stop;
+		loop.clip = config.loop;
 		loop.volume = 0;
+		curVolume = 0;
+		loop.loop = true;
+		loop.Play();
+	}
+
+	public void BindCallback(UnityEvent startEvent, UnityEvent stopEvent) {
+		startEvent.AddListener(Begin);
+		stopEvent.AddListener(End);
 	}
 
 	public void Begin() {
-		start.Play();
+		start.Play(oneShot);
 		volumeTarget = 1;
 	}
 
-	private void Update() {
-		curVolume = Mathf.MoveTowards(curVolume, volumeTarget, 1f / fadeDuration * Time.deltaTime);
-		loop.volume = volumeFade.Evaluate(curVolume);
-		loop.pitch = speedToPitch.Evaluate(body.velocity.magnitude);
+	public void Update() {
+		curVolume = Mathf.MoveTowards(curVolume, volumeTarget, 1f / asset.globalFadeDuration * Time.deltaTime);
+		loop.volume = asset.globalFadeVolumeCurve.Evaluate(curVolume);
 	}
 
 	public void End() {
-		end.Play();
+		stop.Play(oneShot);
 		volumeTarget = 0;
 	}
 }
