@@ -22,6 +22,12 @@ public class PlayerMaterialSpawner : MonoBehaviour {
 	public MaterialEffects water;
 	public GameObject[] paintBlobOptions;
 
+	[Header("Force Field")]
+	public Material forcefieldPaint;
+	public Material forcefieldWater;
+	public Material forcefieldFire;
+	public MeshRenderer forcefieldRenderer;
+
 	private Player player;
 
 	// ------------------------------
@@ -39,6 +45,25 @@ public class PlayerMaterialSpawner : MonoBehaviour {
 		Bind(water, player.water);
 
 		player.paint.changed.AddListener(_ => SpawnPaint());
+	}
+
+	private void Update() {
+		bool hasPaint = player.paint.current > 0;
+		bool hasFire = player.fire.current > 0;
+		bool hasWater = player.water.current > 0;
+
+		if (!hasPaint && !hasFire && !hasWater) {
+			forcefieldRenderer.enabled = false;
+		} else {
+			forcefieldRenderer.enabled = true;
+			if (hasFire) {
+				forcefieldRenderer.material = forcefieldFire;
+			} else if (hasWater) {
+				forcefieldRenderer.material = forcefieldWater;
+			} else if (hasPaint) {
+				forcefieldRenderer.material = forcefieldPaint;
+			}
+		}
 	}
 
 	private void SpawnIfExists(GameObject prefab) {

@@ -7,6 +7,7 @@ public class Flower : MonoBehaviour {
 	[Header("Common")]
 	public FertileSoil owner;
 	public float destroyDelay = 1;
+	public Transform meshSelect;
 
 	[Header("Sound")]
 	public SoundApiAsset soundAsset;
@@ -27,6 +28,11 @@ public class Flower : MonoBehaviour {
 
 		fire.Initialize(soundAsset, soundAsset.flowerFire);
 		fire.BindCallback(burnable.ignited, burnable.burned);
+
+		foreach (Transform child in meshSelect) {
+			child.gameObject.SetActive(false);
+		}
+		meshSelect.GetChild(UnityEngine.Random.Range(0, meshSelect.childCount)).gameObject.SetActive(true);
 	}
 
 	private void Start() {
@@ -42,6 +48,7 @@ public class Flower : MonoBehaviour {
 	private void Kill() {
 		if (owner) {
 			owner.blocker = null;
+			owner.meshSelect.gameObject.SetActive(true);
 		}
 		anim.SetTrigger("Burn");
 		

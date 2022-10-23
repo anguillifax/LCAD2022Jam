@@ -129,9 +129,10 @@ MonoBehaviour:
     stop: []
   flowerContact: {fileID: 8300000, guid: f83766bf664a85647961467cd1605cac, type: 3}
   levelTimerBegin: {fileID: 8300000, guid: c12e5a1b66cb94b4f8ce19181ef1b788, type: 3}
-  levelTimerHalfway: {fileID: 0}
-  levelTimerLastSeconds: {fileID: 0}
-  levelTimerEnd: {fileID: 0}
+  levelTimerHalfway: {fileID: 8300000, guid: 5e04a393197218d44b692cfc7f3f9048, type: 3}
+  levelTimerLastSeconds: {fileID: 8300000, guid: 529a5f52b95b07244be8d0d8abebfcbc,
+    type: 3}
+  levelTimerEnd: {fileID: 8300000, guid: 51c969ecf27ba40439850edb5017ff4e, type: 3}
   menuClick: {fileID: 8300000, guid: 2ce8bd61e18a2084eab49971f4b6c6c6, type: 3}
   menuOpen: {fileID: 8300000, guid: cd45ae123e6e2794bbbe86e29b351c9c, type: 3}
   menuClose: {fileID: 8300000, guid: 039eb50d9c280f248ac399481311eec9, type: 3}
