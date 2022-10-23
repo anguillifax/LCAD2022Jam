@@ -51,13 +51,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Add_Tint: 0
+    - _Add_Tint: 1
     - _Animation_Speed: 0.05
     - _Emissive_Strength: 0
     - _Fresnel_Fade: 1
     - _Fresnel_Intensity: 1
     - _Metallic: 0
-    - _Opacity: 0.716
+    - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0
@@ -68,7 +68,7 @@ Material:
     - _Use_Noise_Map: 1
     m_Colors:
     - _Emissive_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6395603133581012555
 MonoBehaviour:
