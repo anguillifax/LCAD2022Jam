@@ -83,7 +83,7 @@ MonoBehaviour:
   rigOffset: {fileID: 9082027237012594695}
   rigZoom: {fileID: 9082027237201765483}
   rootSmoothDamp: 0.1
-  rootMoveDamp: 2
+  rootMoveDamp: 0.9
   rotateAutoSpeed: -5
   rotateSpeed: -65
   rotateSpeedTargetDamp: 0.3
