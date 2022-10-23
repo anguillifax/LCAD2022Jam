@@ -10,7 +10,6 @@ public class ShuffleBox {
 
 	public void Play() {
 		if (clips.Length == 0) {
-			Debug.LogWarning("ShuffleBox needs at least 1 audio clip assigned.");
 			return;
 		}
 
