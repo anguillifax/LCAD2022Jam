@@ -4,26 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-	public static int highscore;
+	public static int highscore = 0;
 	public static GameManager Instance { get; private set; }
+	public static LevelSession Session { get; private set; }
 
 	public bool debugMode;
-
-	public float gameTimer = 60 * 2;
-	public float remainingTime;
-
-	public GameObject prefabFlowerCounter;
 
 	// ------------------------------
 
 	private void Awake() {
+		if (Instance != null) {
+			Debug.LogWarning("Game Manager already in existence", this);
+		}
 		Instance = this;
-		highscore = 0;
 	}
 
 	private void Update() {
-		if (Input.GetKeyDown(KeyCode.Equals)) {
-			Instantiate(prefabFlowerCounter);
-		}
+	}
+
+	public void CreateSession(GameObject prefab) {
+		var go = Instantiate(prefab, transform);
+		Session = go.GetComponent<LevelSession>();
 	}
 }
