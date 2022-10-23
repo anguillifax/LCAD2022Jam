@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Dither_WireB
+  m_Name: MA_Dither_FlatTan
   m_Shader: {fileID: -6465566751694194690, guid: b3ab79327c4abb44e9269b13c6ac58ec,
     type: 3}
   m_ValidKeywords: []
@@ -57,7 +57,7 @@ Material:
     - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 1
+    - _Smoothness: 0
     m_Colors:
-    - _Base_Color: {r: 0.6226415, g: 0.09609682, b: 0, a: 0}
+    - _Base_Color: {r: 0.4716981, g: 0.43936506, b: 0.29992878, a: 0}
   m_BuildTextureStacks: []
