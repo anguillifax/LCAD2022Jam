@@ -9,8 +9,9 @@ public class PlayerSoundEngine : MonoBehaviour {
 	public LifetimeSound fire;
 	public LifetimeSound water;
 	public LifetimeSound paint;
-	public AudioSource stepNormal;
-	public AudioSource stepSoil;
+	public ShuffleBox stepNormal;
+	public ShuffleBox stepSoil;
+	public AudioSource stepSource;
 	public AudioSource hardCollide;
 	public AudioSource[] speedPitchSource;
 	public LayerMask soilMask;
@@ -37,8 +38,8 @@ public class PlayerSoundEngine : MonoBehaviour {
 		Bind(player.fire, fire);
 		Bind(player.water, water);
 
-		stepNormal.clip = asset.playerGroundNormalStep;
-		stepSoil.clip = asset.playerGroundSoilStep;
+		stepNormal.clips = asset.playerGroundNormalStep;
+		stepSoil.clips = asset.playerGroundSoilStep;
 		hardCollide.clip = asset.playerHardCollide;
 	}
 
@@ -58,9 +59,9 @@ public class PlayerSoundEngine : MonoBehaviour {
 		if (travelDistance > asset.playerDistancePerStep) {
 			travelDistance -= asset.playerDistancePerStep;
 			if (Physics.Raycast(transform.position, Vector3.down, soilCastDistance, soilMask, QueryTriggerInteraction.Collide)) {
-				stepSoil.Play();
+				stepSoil.Play(stepSource);
 			} else {
-				stepNormal.Play();
+				stepNormal.Play(stepSource);
 			}
 		}
 	}

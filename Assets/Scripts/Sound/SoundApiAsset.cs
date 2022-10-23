@@ -20,8 +20,8 @@ public class SoundApiAsset : ScriptableObject {
 	public LifetimeSoundConfig playerFire;
 	public LifetimeSoundConfig playerWater;
 	public LifetimeSoundConfig playerPaint;
-	public AudioClip playerGroundNormalStep;
-	public AudioClip playerGroundSoilStep;
+	public AudioClip[] playerGroundNormalStep;
+	public AudioClip[] playerGroundSoilStep;
 	public AudioClip playerHardCollide;
 	public float playerDistancePerStep = 0.6f;
 	public AnimationCurve playerStepSpeedToPitch = new AnimationCurve(new Keyframe(0, 1), new Keyframe(8, 1));

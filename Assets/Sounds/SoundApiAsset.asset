@@ -38,27 +38,39 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   playerFire:
-    start: []
-    loop: {fileID: 0}
-    stop: []
+    start:
+    - {fileID: 8300000, guid: a7e4a6e452f245347a82256e89594740, type: 3}
+    loop: {fileID: 8300000, guid: 1d42507dd49f952499ce4d03cbafb3b2, type: 3}
+    stop:
+    - {fileID: 8300000, guid: c6be13905b9b0bb46961280b46fce7b4, type: 3}
   playerWater:
-    start: []
-    loop: {fileID: 0}
-    stop: []
+    start:
+    - {fileID: 8300000, guid: 881ad5eb6ca903b48b9957e7701c73c9, type: 3}
+    loop: {fileID: 8300000, guid: 4e464021fe23bef458bc9d3cf411cbd5, type: 3}
+    stop:
+    - {fileID: 8300000, guid: 853ce78548ef93941bb041a2a0c98081, type: 3}
   playerPaint:
-    start: []
-    loop: {fileID: 0}
-    stop: []
-  playerGroundNormalStep: {fileID: 0}
-  playerGroundSoilStep: {fileID: 0}
-  playerHardCollide: {fileID: 0}
-  playerDistancePerStep: 0.6
+    start:
+    - {fileID: 8300000, guid: 0dc0c0166882afc48b4b3c982f4a3c4c, type: 3}
+    loop: {fileID: 8300000, guid: f58b4098d18df2a40b683f7e64a7e1ac, type: 3}
+    stop:
+    - {fileID: 8300000, guid: 3f16d06ebd112e24cb05d67b2ae19f75, type: 3}
+  playerGroundNormalStep:
+  - {fileID: 8300000, guid: 50bb4c4f378a8f6408d057a292fa92c1, type: 3}
+  - {fileID: 8300000, guid: cde702b4dd758c44fb1240397650f946, type: 3}
+  - {fileID: 8300000, guid: 87a26ba50b1cc7d4db44bdf32b859363, type: 3}
+  playerGroundSoilStep:
+  - {fileID: 8300000, guid: 133f2c0b4cae5cc4b9e459b3c3196cef, type: 3}
+  - {fileID: 8300000, guid: 667715586cc12fd42a76b807e5d06617, type: 3}
+  - {fileID: 8300000, guid: d7df80069b325b0439aa27ae481bc0fb, type: 3}
+  playerHardCollide: {fileID: 8300000, guid: f0a2522115f14594b8ea8dd314c8f34b, type: 3}
+  playerDistancePerStep: 1.2
   playerStepSpeedToPitch:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.9
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -67,7 +79,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 8
-      value: 1
+      value: 1.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -102,21 +114,24 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   trashFire:
-    start: []
-    loop: {fileID: 0}
-    stop: []
-  trashContactHit: {fileID: 0}
-  trashContactTraverse: {fileID: 0}
-  flowerGrow: {fileID: 0}
+    start:
+    - {fileID: 8300000, guid: dc6aa6ab1a76d7e4eb25da8f3c24785b, type: 3}
+    loop: {fileID: 8300000, guid: 9049017d972e43b46a7574bca9ca2033, type: 3}
+    stop:
+    - {fileID: 8300000, guid: 32ee884752ed04b419cb527a6bb10708, type: 3}
+  trashContactHit: {fileID: 8300000, guid: b981bb7015d428d449a69885f3fd445e, type: 3}
+  trashContactTraverse: {fileID: 8300000, guid: 980ad3b886a910e4891f8f7d2e3f8473,
+    type: 3}
+  flowerGrow: {fileID: 8300000, guid: f9d64751a12b20240a62eb50d19473ab, type: 3}
   flowerFire:
     start: []
-    loop: {fileID: 0}
+    loop: {fileID: 8300000, guid: 68adba3b37b814043a20e99b2c35e1ee, type: 3}
     stop: []
-  flowerContact: {fileID: 0}
-  levelTimerBegin: {fileID: 0}
+  flowerContact: {fileID: 8300000, guid: f83766bf664a85647961467cd1605cac, type: 3}
+  levelTimerBegin: {fileID: 8300000, guid: c12e5a1b66cb94b4f8ce19181ef1b788, type: 3}
   levelTimerHalfway: {fileID: 0}
   levelTimerLastSeconds: {fileID: 0}
   levelTimerEnd: {fileID: 0}
   menuClick: {fileID: 8300000, guid: 2ce8bd61e18a2084eab49971f4b6c6c6, type: 3}
-  menuOpen: {fileID: 0}
-  menuClose: {fileID: 0}
+  menuOpen: {fileID: 8300000, guid: cd45ae123e6e2794bbbe86e29b351c9c, type: 3}
+  menuClose: {fileID: 8300000, guid: 039eb50d9c280f248ac399481311eec9, type: 3}
