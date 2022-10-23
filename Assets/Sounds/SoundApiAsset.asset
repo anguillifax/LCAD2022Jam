@@ -116,7 +116,7 @@ MonoBehaviour:
   levelTimerBegin: {fileID: 0}
   levelTimerHalfway: {fileID: 0}
   levelTimerLastSeconds: {fileID: 0}
-  levelTimeEnd: {fileID: 0}
-  menuClick: {fileID: 0}
+  levelTimerEnd: {fileID: 0}
+  menuClick: {fileID: 8300000, guid: 2ce8bd61e18a2084eab49971f4b6c6c6, type: 3}
   menuOpen: {fileID: 0}
   menuClose: {fileID: 0}
