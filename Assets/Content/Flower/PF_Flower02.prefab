@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7110766694149807707}
   - component: {fileID: 4992930592991128209}
   m_Layer: 0
-  m_Name: SM_Flower02
+  m_Name: PF_Flower02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

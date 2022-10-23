@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Fresnel_Gas
-  m_Shader: {fileID: -6465566751694194690, guid: d4556ac350f3a824b93be2fc748fadc9,
+  m_Name: MA_Paint01
+  m_Shader: {fileID: -6465566751694194690, guid: 56ec3b2d8b536f1488d33be6a5263f81,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -22,7 +22,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Alpha_Mask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3c26ff2d4efff474fa444a42ff9713e9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_Texture:
@@ -30,11 +30,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture_Input:
-        m_Texture: {fileID: 2800000, guid: 7a436ac7ba534704883481845da25221, type: 3}
+        m_Texture: {fileID: 2800000, guid: e8df1658218fafb409f069fd2e4454c0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -51,26 +47,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Add_Tint: 0
-    - _Animation_Speed: 0.05
+    - _Add_Tint: 1
+    - _Animation_Speed: 0.01
     - _Emissive_Strength: 0
-    - _Fresnel_Fade: 1
-    - _Fresnel_Intensity: 1
+    - _Fresnel_Fade: 1.68
     - _Metallic: 0
-    - _Opacity: 0.6
+    - _Opacity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Smoothness: 0
-    - _Texture_Strength: 9.15
-    - _Texture_Tiling: 1
-    - _Use_Alpha_Mask: 0
+    - _Smoothness: 1
+    - _Texture_Strength: 5
+    - _Texture_Tiling: 0.5
+    - _Use_Alpha_Mask: 1
     - _Use_Gradient: 1
     - _Use_Noise_Map: 1
     m_Colors:
     - _Emissive_Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Tint: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &6395603133581012555
+--- !u!114 &1559562498679718792
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
