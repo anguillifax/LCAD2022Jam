@@ -21,8 +21,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Alpha_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Noise_Texture:
         m_Texture: {fileID: 2800000, guid: 7a436ac7ba534704883481845da25221, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_Map:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_Input:
@@ -43,15 +51,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Add_Tint: 0
     - _Animation_Speed: 0.05
     - _Emissive_Strength: 0
     - _Fresnel_Fade: 1
     - _Fresnel_Intensity: 1
-    - _Opacity: 0.5
+    - _Metallic: 0
+    - _Opacity: 0.6
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Smoothness: 0
     - _Texture_Strength: 9.15
     - _Texture_Tiling: 1
+    - _Use_Alpha_Mask: 0
     - _Use_Gradient: 1
     - _Use_Noise_Map: 1
     m_Colors:
