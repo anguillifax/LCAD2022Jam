@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Flower_Petals_Dead
+  m_Name: MA_Flower_Petals_Dead_Light
   m_Shader: {fileID: -6465566751694194690, guid: 03fb8592297b1b644a2527544f29e832,
     type: 3}
   m_ValidKeywords: []
@@ -54,6 +54,5 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Random_Seed: 0
-    - _V2: 1
     m_Colors: []
   m_BuildTextureStacks: []
