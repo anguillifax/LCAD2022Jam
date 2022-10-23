@@ -55,8 +55,10 @@ public class Player : MonoBehaviour {
 		}
 
 		public void RemoveAll() {
-			current = 0;
-			removed.Invoke();
+			if (current != 0) {
+				current = 0;
+				removed.Invoke();
+			}
 		}
 	}
 

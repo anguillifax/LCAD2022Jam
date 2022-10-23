@@ -35,7 +35,7 @@ public class LevelSession : MonoBehaviour {
 		if (enableTimer && Active) {
 			gameTimer -= Time.deltaTime;
 
-			if (!flagHalfway && gameTimer <= 0.5f * gameTimerMax) {
+			if (!flagHalfway && gameTimer <= 0.5f * gameTimerMax && 0.5f * gameTimerMax > 5) {
 				NotifyHalfway();
 				flagHalfway = true;
 			}

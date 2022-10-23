@@ -48,6 +48,8 @@ MonoBehaviour:
   enableTimer: 1
   gameTimerMax: 4
   gameTimer: 0
+  soundAsset: {fileID: 11400000, guid: 87bc2846b7d3fe24ca1fb64a3c2ec235, type: 2}
+  timerSound: {fileID: 6392584442804778019}
   endCutscene: {fileID: 0}
 --- !u!1 &9008447593594689218
 GameObject:

@@ -35,6 +35,10 @@ public class Flower : MonoBehaviour {
 		}
 	}
 
+	private void Update() {
+		fire.Update();
+	}
+
 	private void Kill() {
 		if (owner) {
 			owner.blocker = null;

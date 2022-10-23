@@ -34,6 +34,7 @@ public class LifetimeSound {
 	public void Begin() {
 		start.Play(oneShot);
 		volumeTarget = 1;
+		Debug.Log("begin");
 	}
 
 	public void Update() {
@@ -44,5 +45,6 @@ public class LifetimeSound {
 	public void End() {
 		stop.Play(oneShot);
 		volumeTarget = 0;
+		Debug.Log("end");
 	}
 }
