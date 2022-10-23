@@ -8,6 +8,6 @@ public class HighscoreCounter : MonoBehaviour {
 	public TextMeshProUGUI text;
 
 	private void Awake() {
-		text.text = GameManager.highscore.ToString();
+		text.text = GameManager.Instance.highscore.ToString();
 	}
 }

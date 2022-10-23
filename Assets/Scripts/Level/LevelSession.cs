@@ -31,6 +31,10 @@ public class LevelSession : MonoBehaviour {
 		timerSound.PlayOneShot(soundAsset.levelTimerBegin);
 	}
 
+	private void OnDestroy() {
+		GameManager.Instance.EndSession();
+	}
+
 	private void Update() {
 		if (enableTimer && Active) {
 			gameTimer -= Time.deltaTime;
