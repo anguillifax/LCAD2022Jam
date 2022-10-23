@@ -16,8 +16,15 @@ public class Burnable : MonoBehaviour {
 	[Header("Live")]
 	public float current;
 	private float targetMax;
+	private ParticleSystem particles;
 
 	// ------------------------------
+
+	private void Awake() {
+		var go = Instantiate(Resources.Load<GameObject>("Fire Particles"), transform);
+		particles = go.GetComponent<ParticleSystem>();
+		particles.Stop();
+	}
 
 	private void OnEnable() {
 		current = -1;
@@ -41,6 +48,7 @@ public class Burnable : MonoBehaviour {
 		current = 0;
 		targetMax = maxBurn + UnityEngine.Random.Range(-maxBurnJitter, maxBurnJitter);
 		ignited.Invoke();
+		particles.Play();
 	}
 
 	private void Propagate() {
