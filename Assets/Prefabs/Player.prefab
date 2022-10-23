@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 831352823772539869}
   - component: {fileID: 831352823772539868}
   - component: {fileID: 831352823772539866}
+  - component: {fileID: 6099739460650825189}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -165,6 +166,8 @@ MonoBehaviour:
   debugMode: 1
   moveVel: 1.81
   paintBurnRate: 8
+  idleDrag: 2
+  idleAngularDrag: 2
   paint:
     current: 0
     timeDecay: 0
@@ -233,6 +236,14 @@ MonoBehaviour:
     prefabAdd: {fileID: 0}
     prefabTrail: {fileID: 0}
     prefabRemove: {fileID: 0}
+--- !u!81 &6099739460650825189
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831352823772539809}
+  m_Enabled: 1
 --- !u!1 &831352824286462146
 GameObject:
   m_ObjectHideFlags: 0

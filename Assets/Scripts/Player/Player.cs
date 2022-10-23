@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour {
 	public enum State {
-		Idle, Playing,
+		Playing, Idle,
 	}
 
 	[Serializable]
@@ -65,9 +65,10 @@ public class Player : MonoBehaviour {
 	[Header("Main")]
 	public State state;
 	public bool debugMode;
-
 	public float moveVel = 8;
 	public float paintBurnRate = 8;
+	public float idleDrag = 50;
+	public float idleAngularDrag = 50;
 
 	[Header("Stats")]
 	public DecayStat paint = new DecayStat(0, 3);
@@ -76,6 +77,7 @@ public class Player : MonoBehaviour {
 
 	private Rigidbody body;
 	private Vector3 targetVelocity;
+	private Transform cameraTransform;
 
 	// ------------------------------
 
@@ -89,6 +91,8 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Start() {
+		cameraTransform = FindObjectOfType<CameraController>().rigRoot;
+		state = State.Playing;
 		paint.Reset();
 		fire.Reset();
 		water.Reset();
@@ -103,8 +107,12 @@ public class Player : MonoBehaviour {
 	}
 
 	private void FixedUpdate() {
+		if (state == State.Idle) {
+			return;
+		}
+
 		targetVelocity = moveVel * new Vector3(InputClamped.x, 0, InputClamped.y);
-		body.AddForce(targetVelocity, ForceMode.Impulse);
+		body.AddForce(cameraTransform.TransformDirection(targetVelocity), ForceMode.Impulse);
 
 		float distance = body.velocity.magnitude * Time.fixedDeltaTime;
 		if (fire.current > 0) {
@@ -117,6 +125,10 @@ public class Player : MonoBehaviour {
 	}
 
 	private void OnTriggerStay(Collider other) {
+		if (state == State.Idle) {
+			return;
+		}
+
 		if (other.GetIfExists<FireSource>(out var fireSource)) {
 			water.RemoveAll();
 			fire.SetAmount(fireSource.amount);
@@ -131,6 +143,12 @@ public class Player : MonoBehaviour {
 			paint.SetAmount(paintBlob.amount);
 			paintBlob.BeginDestroy();
 		}
+	}
+
+	public void SetIdle() {
+		state = State.Idle;
+		body.drag = idleDrag;
+		body.angularDrag = idleAngularDrag;
 	}
 }
 

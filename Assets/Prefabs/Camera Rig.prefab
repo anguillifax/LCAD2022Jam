@@ -83,11 +83,11 @@ MonoBehaviour:
   rigOffset: {fileID: 9082027237012594695}
   rigZoom: {fileID: 9082027237201765483}
   rootSmoothDamp: 0.1
-  rootMoveDamp: 0.8
+  rootMoveDamp: 2
   rotateAutoSpeed: -5
   rotateSpeed: -65
   rotateSpeedTargetDamp: 0.3
-  turntableResetDamp: 0.3
+  turntableResetDamp: 2
   farDistance: -10
   farSmoothDamp: 2.01
   idleTimerMax: 0.4
@@ -104,7 +104,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9082027237201765483}
   - component: {fileID: 9082027237201765480}
-  - component: {fileID: 9082027237201765481}
   - component: {fileID: 9082027237201765482}
   m_Layer: 0
   m_Name: Main Camera
@@ -171,14 +170,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &9082027237201765481
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9082027237201765486}
-  m_Enabled: 1
 --- !u!114 &9082027237201765482
 MonoBehaviour:
   m_ObjectHideFlags: 0
