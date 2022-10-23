@@ -22,7 +22,11 @@ public class FlowerCounter : MonoBehaviour {
 
 	public void Update() {
 		if (lastProgress != progress) {
-			text.text = Mathf.RoundToInt(mapProgress.Evaluate(progress) * count).ToString();
+			if (progress <= 1) {
+				text.text = Mathf.RoundToInt(mapProgress.Evaluate(progress) * (count - 1)).ToString();
+			} else {
+				text.text = count.ToString();
+			}
 			lastProgress = progress;
 		}
 	}
