@@ -21,6 +21,7 @@ public class PlayerMaterialSpawner : MonoBehaviour {
 	public MaterialEffects fire;
 	public MaterialEffects water;
 	public GameObject[] paintBlobOptions;
+	public ParticleSystem fireParticles;
 
 	[Header("Force Field")]
 	public Material forcefieldPaint;
@@ -43,6 +44,10 @@ public class PlayerMaterialSpawner : MonoBehaviour {
 		Bind(paint, player.paint);
 		Bind(fire, player.fire);
 		Bind(water, player.water);
+
+		player.fire.added.AddListener(fireParticles.Play);
+		player.fire.removed.AddListener(fireParticles.Stop);
+		fireParticles.Stop();
 
 		player.paint.changed.AddListener(_ => SpawnPaint());
 	}
