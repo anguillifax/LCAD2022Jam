@@ -859,6 +859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zen Garden
       objectReference: {fileID: 0}
+    - target: {fileID: 8874149770019518057, guid: fe4cb34902f099343a2abfab157d15f6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe4cb34902f099343a2abfab157d15f6, type: 3}
 --- !u!224 &784282557446935732 stripped

@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 8714af3bd80a1ca4eb3caba2b4d33b4c
   - enabled: 1
-    path: Assets/Scenes/ZenGarden.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/TimeAttack.unity
     guid: 73808054a3b61784cbe034c48bb03fe5
   m_configObjects: {}
