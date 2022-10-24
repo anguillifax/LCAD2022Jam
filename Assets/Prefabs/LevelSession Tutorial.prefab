@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableTimer: 1
-  gameTimerMax: 4
+  gameTimerMax: 60
   gameTimer: 0
   soundAsset: {fileID: 11400000, guid: 87bc2846b7d3fe24ca1fb64a3c2ec235, type: 2}
   timerSound: {fileID: 6392584442804778019}
