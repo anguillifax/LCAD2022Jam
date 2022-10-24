@@ -541,6 +541,7 @@ MonoBehaviour:
   - {fileID: 1353843303997313018, guid: 13fc2ed6b90cc2944acb5d1c944ac6b3, type: 3}
   - {fileID: 1353843303997313018, guid: 1b6ef47b82489bb49b5c12c2adcd1403, type: 3}
   - {fileID: 1353843303997313018, guid: 24cebb2c8493b6b449abedcebe9d9a1c, type: 3}
+  fireParticles: {fileID: 1114023626598386117}
   forcefieldPaint: {fileID: 2100000, guid: 7a9cff6d84849464483c4bd8c8e17f41, type: 2}
   forcefieldWater: {fileID: 2100000, guid: 1a54a917a92cfe64a8807624e16d4f63, type: 2}
   forcefieldFire: {fileID: 2100000, guid: 9e210413541c7e7499b98c968829878f, type: 2}
@@ -1874,6 +1875,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981510cf9f130724184b4781229ed51d, type: 3}
+--- !u!198 &1114023626598386117 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3188153701709539069, guid: 981510cf9f130724184b4781229ed51d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2543221455386341176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3543231563317747375 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1326099146867077527, guid: 981510cf9f130724184b4781229ed51d,

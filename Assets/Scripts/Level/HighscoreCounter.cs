@@ -7,7 +7,7 @@ using UnityEngine;
 public class HighscoreCounter : MonoBehaviour {
 	public TextMeshProUGUI text;
 
-	private void Awake() {
+	private void OnEnable() {
 		text.text = GameManager.Instance.highscore.ToString();
 	}
 }

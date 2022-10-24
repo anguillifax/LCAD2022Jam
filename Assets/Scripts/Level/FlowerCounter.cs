@@ -17,6 +17,7 @@ public class FlowerCounter : MonoBehaviour {
 
 	private void OnEnable() {
 		count = FindObjectsOfType<Flower>().Length;
+		GameManager.Instance.highscore = Mathf.Max(count, GameManager.Instance.highscore);
 		text.text = "0";
 	}
 
